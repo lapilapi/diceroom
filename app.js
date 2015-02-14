@@ -45,5 +45,6 @@ app.get('/lot', function(req, res) {
 //============================================
 // execute
 //============================================
-app.listen(3000);
+var port = process.env.PORT || 3000;
+app.listen(port);
 console.log("server listening on port 3000");
