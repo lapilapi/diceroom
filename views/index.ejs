@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" lang="ja" xml:lang="ja">
+<head>
+	<title>DICE ROOM</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/dice_client.js"></script>
+
+	<!-- Bootstrap -->
+	<link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+<body>
+	  <div class="container">
+	  <!-- Button trigger modal -->	  
+		  <div class="row">
+		  <h1>Test</h1>
+		  <button type="button" class="btn btn-primary btn-default" data-toggle="modal" data-target="#myModal">ロットする</button>
+		  <table class="table table-striped">
+		  <thead>
+		  	<tr>
+		  		<th>出目</th>
+		  		<th>コメント</th>
+				<th>日時</th>
+				<th>生成ハッシュ<th>
+		  	</tr>
+		  </thead>
+		  <tbody id="lot_table"></tbody>
+		  </table>
+		  <button type="button" class="btn btn-primary btn-default" id="next_button">更に読み込む</button>
+	  </div>
+	  <br />
+	  <div class="bg-info" style="padding:5px;">
+		  <small>擬似乱数生成にはxorshift 128bitを用いており ゲーム中のロットシステム同様1～100の整数を取得できます</small><br />
+		  <small><a href="http://www.jstatsoft.org/v08/i14/paper">http://www.jstatsoft.org/v08/i14/paper</a></small><br />
+		  <br />
+		  <small>ソースコードはここにおいてります</small><br/>
+		  <small><a href="https://github.com/lapilapi/diceroom">https://github.com/lapilapi/diceroom</a></small><br />
+
+	  </div>
+	  <hr />
+	  <small>Lapis Lazulite(Aegis) [lapis at outlook.com]</small>
+	</div>
+
+	
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="myModalLabel">ロットを行う</h4>
+      </div>
+      <div class="modal-body" id="message_area_div">
+            <label for="recipient-name" class="control-label">コメント（必須）</label>
+            <input type="text" class="form-control" id="message_area">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">キャンセル</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="lot_accept_button">決定</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

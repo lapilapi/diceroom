@@ -1,0 +1,9 @@
+{
+	"version": "1.0.0.0",
+	"basic" : {
+		"user"	: "kazumi",
+		"pass"	: "kazumi"
+	},
+	"default_lot_min": 0,
+	"default_lot_max": 100
+}
