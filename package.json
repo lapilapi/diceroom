@@ -9,6 +9,7 @@
 		"ejs": "2.2.3",
 		"mongoose": "3.8.22",
 		"basic-auth-connect": "1.0.0",
-		"timezone": "0.0.39"
+		"timezone": "0.0.39",
+		"validator": "3.30.0"
 	}
 }
