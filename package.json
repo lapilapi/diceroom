@@ -8,6 +8,7 @@
 		"express": "4.11.1",
 		"ejs": "2.2.3",
 		"mongoose": "3.8.22",
-		"basic-auth-connect": "1.0.0"
+		"basic-auth-connect": "1.0.0",
+		"timezone": "0.0.39"
 	}
 }
